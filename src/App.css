@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   min-height: 100vh;
+  background-color: #e6e6e6;
+  color: #000;
+}
+#app .container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px 0;
+  border-radius: 20px;
+  background-color: #eff6f8;
+}
+#app .container .add-note {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #2378c3;
 }
-
-.App-link {
-  color: #61dafb;
+#app .container .add-note p {
+  color: #fff;
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#app .container .add-note textarea, #app .container .add-note input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+#app .container .add-note button {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #73b3e7;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+#app .container .add-note button:hover {
+  background-color: #2e97e8;
+}
+#app .container .notes {
+  padding: 10px;
+}
+#app .container .notes .note {
+  padding: 14px;
+  border-radius: 6px;
+}
+#app .container .notes .note .note-title {
+  display: flex;
+  justify-content: space-between;
+}
+#app .container .notes .note .note-title h5 {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 4px 0px;
+}
+#app .container .notes .note .note-title button {
+  display: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 0px;
+  background-color: #73b3e7;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+#app .container .notes .note .note-title button:hover {
+  background-color: #2e97e8;
+}
+#app .container .notes .note .note-content {
+  margin: 5px 0;
+}
+#app .container .notes .note:hover {
+  background-color: #e6e6e6;
+}
+#app .container .notes .note:hover button {
+  display: block;
 }
